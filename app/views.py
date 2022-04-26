@@ -4,8 +4,10 @@ from app import app
 #views
 @app.route('/')
 def index():
-    return render_template('index.html',message = "message")
+    message = "Hello Flask"
+    title = 'Home: Welcome to the bestMovie review website online!'
+    return render_template('index.html',message = message, title = title)
 
-@app.route('/movie/<int:movie_id>')
+@app.route('/movie/<movie_id>')
 def movie(movie_id):
-    return render_template('movie.html',id = movie_id)
+    return render_template('movie.html')

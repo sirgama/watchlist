@@ -1,29 +1,29 @@
+{% import 'macros.html' as macro%}
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    {% if title %}
-    <title> {{title}} </title>
-    {% else %}
-    <title>Document tst header</title>
-    {% endif %}
-</head>
-<body>
-    
-</body>
+<html>
+    <head>
+        <meta charset="utf-8">
+        {% if title %}
+        <title> {{ title }}</title>
+        {% else %}
+        <title> Welcome to the best Movie Review website </title>
+        {% endif %}
+    </head>
+    <body>
+        <!-- Popular movie -->
+        <h3> Popular Movies</h3>
+        <ul>
+            {{ macro.displayMovieList(popular)}}
+        </ul>
+        <!-- Upcoming movie  -->
+        <h3> Upcoming Movies </h3>
+        <ul>
+            {{ macro.displayMovieList(upcoming)}}
+        </ul>
+        <!-- Now showing movie -->
+        <h3>Now Showing</h3>
+        <ul>
+            {{ macro.displayMovieList(now_showing)}}
+        </ul>
+    </body>
 </html>
-
-
-
-<h1> {{ message }} </h1>
-<iframe style="border-radius:12px" src="https://open.spotify.com/embed/show/0McIdmADjTxoUjbVawQhKY?utm_source=generator&theme=0" width="100%" height="232" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
-<body>
-    <!-- Popular movies section -->
-    <h3>Popular Movies</h3>
-    <ul>
-        {% for popular_movie in popular%}
-        <li>{{  popular_movie.title }}</li>
-    </ul>
-</body>

@@ -1,6 +1,7 @@
 import unittest
 from app.models import Movie
 
+
 class MovieTest(unittest.TestCase):
     '''
     Test Class to test the behaviour of the Movie class

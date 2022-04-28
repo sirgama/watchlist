@@ -7,12 +7,12 @@ class Config:
 
 class ProdConfig(Config):
     
-    pass
+    DEBUG = True
 
 class DevConfig(Config):
     
     
-    DEBUG = True
+    DEBUG = False
     
 config_options = {
 'development':DevConfig,

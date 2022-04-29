@@ -6,13 +6,15 @@ class Config:
 
 
 class ProdConfig(Config):
-    
-    pass
+    '''
+    '''
+pass
 
 class DevConfig(Config):
+    '''
+    '''
     
-    
-    DEBUG = True
+DEBUG = True
     
 config_options = {
 'development':DevConfig,
